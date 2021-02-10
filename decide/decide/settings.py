@@ -68,7 +68,7 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'http://localhost:8000'
+BASEURL = 'https://pruba2.herokuapp.com'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -153,10 +153,12 @@ STATIC_URL = '/static/'
 # number of bits for the key, all auths should use the same number of bits
 KEYBITS = 256
 
+APIS={}
+
 try:
     from local_settings import *
 except ImportError:
     print("local_settings.py not found")
 
-
+import django_heroku
 INSTALLED_APPS = INSTALLED_APPS + MODULES

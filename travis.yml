@@ -27,6 +27,6 @@ script:
   - python-codacy-coverage -r coverage.xml
 deploy:
   provider: heroku
-  app: guarrizas-postproc
+  app: pruba2
   strategy: git
   api_key: $HEROKU_AUTH_TOKEN
